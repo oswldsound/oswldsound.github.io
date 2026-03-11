@@ -11,18 +11,21 @@ html, body {
   background: #000;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow-y: scroll; /* permite desplazamiento vertical */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
 }
-body::-webkit-scrollbar { width: 0; background: transparent; }
 
-/* Container: versión desktop */
+body::-webkit-scrollbar {
+  width: 0; /* Safari y Chrome */
+  background: transparent;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 120px 80px; /* más centrado en desktop */
+  padding: 120px 80px;
 }
 
 /* Título principal */
@@ -36,26 +39,26 @@ h1 {
 h2 {
   font-size: 1.25rem;
   font-weight: 400;
-  margin: 0 0 60px 0;
+  margin: 0 0 60px 0; /* espacio entre close your eyes y Beats */
   color: #ccc;
   text-transform: lowercase;
 }
 
-/* Enlaces principales */
+/* Links principales */
 .main-links {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 40px; /* espacio entre Beats y Credits */
   font-size: 2rem;
 }
 
-/* Enlaces secundarios */
+/* Links secundarios */
 .secondary-links {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; /* espacio interno entre Email, Instagram, YouTube */
   font-size: 1.25rem;
-  margin-top: 60px;
+  margin-top: 60px; /* espacio proporcional entre Credits y Email */
   color: #aaa;
 }
 
@@ -78,10 +81,9 @@ h2 {
 
 /* Ajustes para móviles */
 @media (max-width: 600px) {
-  .container { padding: 60px 20px; } /* borde más pegado */
-  h1 { font-size: 2.5rem; margin-bottom: 10px; }
-  h2, .secondary-links { font-size: 1rem; margin-bottom: 20px; }
-  .main-links { font-size: 1.5rem; gap: 20px; }
+  h1 { font-size: 2.5rem; }
+  h2, .secondary-links { font-size: 1rem; }
+  .main-links { font-size: 1.5rem; }
 }
 </style>
 </head>
