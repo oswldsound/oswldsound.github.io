@@ -18,7 +18,6 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   padding: 120px 80px;
-  gap: 50px;
 }
 
 /* Título principal */
@@ -32,7 +31,7 @@ h1 {
 h2 {
   font-size: 1.25rem;
   font-weight: 400;
-  margin: 0 0 0 0; /* eliminamos margen inferior para ajustar manualmente */
+  margin: 0 0 60px 0; /* espacio aumentado entre close your eyes y Beats */
   color: #ccc;
   text-transform: lowercase;
 }
@@ -41,9 +40,18 @@ h2 {
 .main-links {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 40px; /* espacio entre Beats y Credits */
   font-size: 2rem;
-  margin-top: 20px; /* mismo espacio que entre email y Credits */
+}
+
+/* Links secundarios */
+.secondary-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espacio interno entre Email, Instagram, YouTube */
+  font-size: 1.25rem;
+  margin-top: 60px; /* mismo espacio que h2 → Beats, para Credits → Email */
+  color: #aaa;
 }
 
 .link {
@@ -63,30 +71,11 @@ h2 {
   color: #ddd;
 }
 
-/* Links secundarios */
-.secondary-links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 1.25rem;
-  color: #aaa;
-}
-
-.secondary-links .link:hover {
-  color: #ddd;
-}
-
-/* Ajustes mínimos para móviles */
+/* Ajustes para móviles */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2, .secondary-links {
-    font-size: 1rem;
-  }
-  .main-links {
-    font-size: 1.5rem;
-  }
+  h1 { font-size: 2.5rem; }
+  h2, .secondary-links { font-size: 1rem; }
+  .main-links { font-size: 1.5rem; }
 }
 </style>
 </head>
