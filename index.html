@@ -3,37 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Oswld Sound</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body {
+html, body {
   margin: 0;
+  height: 100%;
   background: #000;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 120px 80px;
+  display: flex;
+  align-items: center; /* vertical centrar */
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* izquierda */
+  gap: 50px;
+  padding: 0 80px; /* margen horizontal */
+  width: 100%;
+}
+
+/* Título principal */
 h1 {
   font-size: 3rem;
   font-weight: 700;
   margin: 0 0 20px 0;
 }
 
+/* Subtítulo */
 h2 {
-  font-size: 1.25rem; /* tamaño de close your eyes */
+  font-size: 1.25rem;
   font-weight: 400;
   margin: 0 0 80px 0;
   color: #ccc;
   text-transform: lowercase;
 }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  align-items: flex-start;
-}
-
-/* Beats y Credits: principales, grandes y subrayados */
+/* Links principales */
 .main-links {
   display: flex;
   flex-direction: column;
@@ -58,26 +65,39 @@ h2 {
   color: #ddd;
 }
 
-/* Email, Instagram, YouTube: mismos que close your eyes */
+/* Links secundarios */
 .secondary-links {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 1.25rem; /* igual que h2 */
-  color: #aaa; /* gris suave */
+  font-size: 1.25rem;
+  color: #aaa;
 }
 
 .secondary-links .link:hover {
   color: #ddd;
 }
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2, .secondary-links {
+    font-size: 1rem;
+  }
+  .main-links {
+    font-size: 1.5rem;
+  }
+}
 </style>
 </head>
 <body>
 
-<h1>OS</h1>
-<h2>close your eyes</h2>
+<div class="container">
+  <h1>OS</h1>
+  <h2>close your eyes</h2>
 
-<div class="links">
   <div class="main-links">
     <a href="https://oswldsound.beatstars.com" class="link underline" target="_blank">Beats</a>
     <a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="link underline" target="_blank">Credits</a>
