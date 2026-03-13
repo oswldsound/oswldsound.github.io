@@ -6,18 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
+/* Reset básico */
+* {
+  box-sizing: border-box;
   margin:0;
+  padding:0;
+}
+
+body {
   background:#000;
   color:#fff;
   font-family:"Helvetica Neue";
   width:100%;
-  box-sizing:border-box;
+  overflow-x:hidden; /* evita desplazamiento lateral */
+  scrollbar-width:none;
 }
 
-/* Ocultar scroll en navegadores que lo muestran */
 body::-webkit-scrollbar { display:none; }
-body { scrollbar-width:none; }
 
 .container {
   display:flex;
@@ -25,18 +30,19 @@ body { scrollbar-width:none; }
   align-items:flex-start;
   padding:120px 80px;
   width:100%;
+  max-width:100vw; /* evita que sobrepase el viewport */
 }
 
 h1 {
   font-size:3rem;
   font-weight:700;
-  margin:0 0 20px 0;
+  margin-bottom:20px;
 }
 
 h2 {
   font-size:1.25rem;
   font-weight:400;
-  margin:0 0 60px 0;
+  margin-bottom:60px;
   color:#ccc;
   text-transform:lowercase;
 }
@@ -44,10 +50,11 @@ h2 {
 .main-links, .secondary-links {
   display:flex;
   flex-direction:column;
+  width:100%;
 }
 
 .main-links {
-  gap:30px;
+  gap:30px; 
   font-size:2rem;
 }
 
@@ -74,17 +81,15 @@ a:hover { color:#ddd; }
 /* Móvil */
 @media (max-width:600px) {
   .container { padding:40px 15px; }
-
   h1 { font-size:2.5rem; margin-bottom:10px; }
   h2 { font-size:1rem; margin-bottom:30px; }
-
   .main-links { font-size:1.5rem; gap:20px; }
   .secondary-links { margin-top:30px; gap:20px; }
 }
 </style>
 </head>
-<body>
 
+<body>
 <div class="container">
   <h1>OS</h1>
   <h2>close your eyes</h2>
@@ -100,6 +105,5 @@ a:hover { color:#ddd; }
     <a href="https://www.youtube.com/@oswldsound" target="_blank">YouTube</a>
   </div>
 </div>
-
 </body>
 </html>
