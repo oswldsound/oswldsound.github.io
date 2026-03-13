@@ -6,123 +6,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-body{
+body {
   margin:0;
   min-height:100vh;
   background:#000;
   color:#fff;
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-y:scroll;
-  scrollbar-width:none;
 }
 
-body::-webkit-scrollbar{
-  display:none;
-}
+/* Ocultar scroll en todos los navegadores */
+body::-webkit-scrollbar { display:none; }
+body { scrollbar-width:none; }
 
-.container{
+.container {
   display:flex;
   flex-direction:column;
   align-items:flex-start;
   padding:120px 80px;
 }
 
-h1{
+h1 {
   font-size:3rem;
   font-weight:700;
   margin:0 0 20px 0;
 }
 
-h2{
+h2 {
   font-size:1.25rem;
   font-weight:400;
-  margin:0 0 40px 0; /* espacio desktop */
+  margin:0 0 60px 0; /* espacio limpio entre subtítulo y main-links */
   color:#ccc;
   text-transform:lowercase;
 }
 
-.main-links{
+.main-links, .secondary-links {
   display:flex;
   flex-direction:column;
-  gap:40px; /* espacio entre Beats y Credits en desktop */
+}
+
+.main-links {
+  gap:50px; /* desktop */
   font-size:2rem;
 }
 
-.secondary-links{
-  display:flex;
-  flex-direction:column;
-  gap:20px; /* espacio entre Email, Instagram, YouTube */
+.secondary-links {
+  gap:30px; /* desktop */
+  margin-top:60px;
   font-size:1.25rem;
-  margin-top:40px; /* espacio entre Credits y Email en desktop */
   color:#aaa;
 }
 
-.link{
+a {
   color:#fff;
   text-decoration:none;
   transition:color .25s ease;
 }
 
-.underline{
+a.underline {
   text-decoration:underline;
   text-decoration-thickness:2px;
 }
 
-.link:hover{
-  color:#ddd;
-}
+a:hover { color:#ddd; }
 
 /* Móvil */
-@media (max-width:600px){
+@media (max-width:600px) {
+  .container { padding:60px 20px; }
 
-  .container{
-    padding:60px 20px;
-  }
+  h1 { font-size:2.5rem; margin-bottom:10px; }
+  h2 { font-size:1rem; margin-bottom:40px; }
 
-  h1{
-    font-size:2.5rem;
-    margin-bottom:10px;
-  }
-
-  h2{
-    font-size:1rem;
-    margin-bottom:40px; /* más espacio entre h2 y Beats, igual que entre Credits y Email */
-  }
-
-  .main-links{
-    font-size:1.5rem;
-    gap:20px; /* espacio entre Beats y Credits en móvil */
-  }
-
-  .secondary-links{
-    margin-top:0; /* no necesitamos añadir margen extra */
-  }
-
+  .main-links { font-size:1.5rem; gap:25px; }
+  .secondary-links { margin-top:40px; gap:20px; }
 }
-
 </style>
 </head>
 
 <body>
-
 <div class="container">
+  <h1>OS</h1>
+  <h2>close your eyes</h2>
 
-<h1>OS</h1>
-<h2>close your eyes</h2>
+  <div class="main-links">
+    <a href="https://oswldsound.beatstars.com" class="underline" target="_blank">Beats</a>
+    <a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="underline" target="_blank">Credits</a>
+  </div>
 
-<div class="main-links">
-<a href="https://oswldsound.beatstars.com" class="link underline" target="_blank">Beats</a>
-<a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="link underline" target="_blank">Credits</a>
+  <div class="secondary-links">
+    <a href="mailto:os@oswldsound.com">Email</a>
+    <a href="https://www.instagram.com/oswldsound/" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/@oswldsound" target="_blank">YouTube</a>
+  </div>
 </div>
-
-<div class="secondary-links">
-<a href="mailto:os@oswldsound.com" class="link">Email</a>
-<a href="https://www.instagram.com/oswldsound/" class="link" target="_blank">Instagram</a>
-<a href="https://www.youtube.com/@oswldsound" class="link" target="_blank">YouTube</a>
-</div>
-
-</div>
-
 </body>
 </html>
