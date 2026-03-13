@@ -4,100 +4,124 @@
 <meta charset="UTF-8">
 <title>Oswld Sound</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-html, body {
-  margin: 0;
-  height: 100%;
-  background: #000;
-  color: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-body::-webkit-scrollbar { width: 0; background: transparent; }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 120px 80px; /* desktop */
+body{
+  margin:0;
+  min-height:100vh;
+  background:#000;
+  color:#fff;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-y:scroll;
+  scrollbar-width:none;
 }
 
-/* Título principal */
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0 0 20px 0;
+body::-webkit-scrollbar{
+  display:none;
 }
 
-/* Subtítulo = close your eyes */
-h2 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin: 0 0 40px 0; /* ahora igual que Credits → Email */
-  color: #ccc;
-  text-transform: lowercase;
+.container{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:120px 80px;
 }
 
-/* Enlaces principales */
-.main-links {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  font-size: 2rem;
+h1{
+  font-size:3rem;
+  font-weight:700;
+  margin:0 0 20px 0;
 }
 
-/* Enlaces secundarios */
-.secondary-links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 1.25rem;
-  margin-top: 40px; /* mismo espacio que h2 → main-links */
-  color: #aaa;
+h2{
+  font-size:1.25rem;
+  font-weight:400;
+  margin:0 0 40px 0; /* espacio desktop */
+  color:#ccc;
+  text-transform:lowercase;
 }
 
-.link {
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-  transition: color 0.25s ease;
+.main-links{
+  display:flex;
+  flex-direction:column;
+  gap:40px; /* espacio entre Beats y Credits en desktop */
+  font-size:2rem;
 }
 
-.link.underline {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #fff;
+.secondary-links{
+  display:flex;
+  flex-direction:column;
+  gap:20px; /* espacio entre Email, Instagram, YouTube */
+  font-size:1.25rem;
+  margin-top:40px; /* espacio entre Credits y Email en desktop */
+  color:#aaa;
 }
 
-.link:hover { color: #ddd; }
-
-/* Ajustes para móviles */
-@media (max-width: 600px) {
-  .container { padding: 60px 20px; }
-  h1 { font-size: 2.5rem; margin-bottom: 10px; }
-  h2, .secondary-links { font-size: 1rem; margin-bottom: 20px; }
-  .main-links { font-size: 1.5rem; gap: 20px; }
+.link{
+  color:#fff;
+  text-decoration:none;
+  transition:color .25s ease;
 }
+
+.underline{
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+
+.link:hover{
+  color:#ddd;
+}
+
+/* Móvil */
+@media (max-width:600px){
+
+  .container{
+    padding:60px 20px;
+  }
+
+  h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+  }
+
+  h2{
+    font-size:1rem;
+    margin-bottom:20px; /* igual que margin-top de secondary-links */
+  }
+
+  .main-links{
+    font-size:1.5rem;
+    gap:20px; /* espacio entre Beats y Credits en móvil */
+  }
+
+  .secondary-links{
+    margin-top:20px; /* igual que margin-bottom de h2 */
+  }
+
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
-  <h1>OS</h1>
-  <h2>close your eyes</h2>
 
-  <div class="main-links">
-    <a href="https://oswldsound.beatstars.com" class="link underline" target="_blank">Beats</a>
-    <a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="link underline" target="_blank">Credits</a>
-  </div>
+<h1>OS</h1>
+<h2>close your eyes</h2>
 
-  <div class="secondary-links">
-    <a href="mailto:os@oswldsound.com" class="link">Email</a>
-    <a href="https://www.instagram.com/oswldsound/" class="link" target="_blank">Instagram</a>
-    <a href="https://www.youtube.com/@oswldsound" class="link" target="_blank">YouTube</a>
-  </div>
+<div class="main-links">
+<a href="https://oswldsound.beatstars.com" class="link underline" target="_blank">Beats</a>
+<a href="https://credits.muso.ai/profile/b9d6627c-d639-4b0f-bddc-f729d2612a7c" class="link underline" target="_blank">Credits</a>
+</div>
+
+<div class="secondary-links">
+<a href="mailto:os@oswldsound.com" class="link">Email</a>
+<a href="https://www.instagram.com/oswldsound/" class="link" target="_blank">Instagram</a>
+<a href="https://www.youtube.com/@oswldsound" class="link" target="_blank">YouTube</a>
+</div>
+
 </div>
 
 </body>
