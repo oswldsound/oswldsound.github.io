@@ -18,7 +18,7 @@ body {
   color:#fff;
   font-family:"Helvetica Neue";
   width:100%;
-  overflow-x:hidden; /* evita desplazamiento lateral */
+  overflow-x:hidden;
   scrollbar-width:none;
 }
 
@@ -28,7 +28,7 @@ body::-webkit-scrollbar { display:none; }
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  padding:120px 80px;
+  padding:120px 100px; /* padding lateral desktop aumentado a 100px */
   width:100%;
 }
 
@@ -41,7 +41,7 @@ h1 {
 h2 {
   font-size:1.25rem;
   font-weight:400;
-  margin-bottom:60px; /* Desktop: espacio entre subtítulo y main-links */
+  margin-bottom:60px;
   color:#ccc;
   text-transform:lowercase;
 }
@@ -53,13 +53,13 @@ h2 {
 }
 
 .main-links {
-  gap:30px; /* Desktop: espacio entre Beats y Credits */
+  gap:30px;
   font-size:2rem;
 }
 
 .secondary-links {
-  gap:30px; /* Desktop: espacio entre Email, Instagram, YouTube */
-  margin-top:60px; /* Desktop: espacio entre Credits y Email */
+  gap:30px;
+  margin-top:60px;
   font-size:1.25rem;
   color:#aaa;
 }
@@ -79,12 +79,11 @@ a:hover { color:#ddd; }
 
 /* Móvil */
 @media (max-width:600px) {
-  .container { padding:40px 25px; } /* padding lateral aumentado a 25px */
+  .container { padding:40px 25px; } /* padding lateral móvil 25px */
   h1 { font-size:2.5rem; margin-bottom:10px; }
-  h2 { font-size:1rem; margin-bottom:40px; /* mayor espacio antes de Beats */ }
+  h2 { font-size:1rem; margin-bottom:40px; }
   .main-links { font-size:1.5rem; gap:20px; }
-  .secondary-links { margin-top:40px; /* mayor espacio después de Credits */
-                      gap:20px; }
+  .secondary-links { margin-top:40px; gap:20px; }
 }
 </style>
 </head>
